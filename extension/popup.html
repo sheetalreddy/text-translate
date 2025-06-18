@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        .percentage-display {
+            text-align: center;
+            font-size: 18px;
+            color: #2196F3;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .translate-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .translate-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .reset-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .reset-btn:hover {
+            background-color: #da190b;
+        }
+        
+        .status {
+            text-align: center;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>🇸🇪 English → Swedish</h3>
+    </div>
+    
+    <div class="control-group">
+        <label for="percentage">Translation Percentage:</label>
+        <input type="range" id="percentage" min="0" max="100" value="25">
+        <div class="percentage-display" id="percentageDisplay">25%</div>
+    </div>
+    
+    <button id="translateBtn" class="translate-btn">Translate Page</button>
+    <button id="resetBtn" class="reset-btn">Reset Page</button>
+    
+    <div id="status" class="status" style="display: none;"></div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

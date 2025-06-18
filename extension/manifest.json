@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "English to Swedish Translator",
+  "version": "1.0",
+  "description": "Translate a percentage of English words to Swedish on any webpage using Google Translate",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://translate.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "English to Swedish Translator"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
